@@ -1,11 +1,10 @@
 package com.aj.leetcode;
 
 public class ListNode {
-    public int element;
+    public int val;
     public ListNode next;
 
-    ListNode(int element) {
-        this.element = element;
-        this.next = null;
+    ListNode(int x) {
+        val = x;
     }
 }
