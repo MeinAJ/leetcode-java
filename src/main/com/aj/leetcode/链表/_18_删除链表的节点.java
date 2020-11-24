@@ -7,7 +7,41 @@ import com.aj.leetcode.ListNode;
  */
 public class _18_删除链表的节点 {
 
-    public ListNode deleteNode(ListNode head, int val) {
-        return null;
+    public static void main(String[] args) {
+        ListNode one = new ListNode(1);
+        ListNode two = new ListNode(2);
+        ListNode three = new ListNode(3);
+        ListNode four = new ListNode(4);
+
+        one.next = two;
+        two.next = three;
+        three.next = four;
+
+
+        ListNode listNode = deleteNode(one, 1);
+        System.out.println(listNode);
     }
+
+    public static ListNode deleteNode(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+        //如果是第一个节点,直接把第一个的next返回
+        if (head.val == val) {
+            return head.next;
+        }
+        ListNode next = head.next;
+        ListNode pre = head;
+        while (next != null) {
+            if (next.val == val) {
+                //把上一个的next指向该节点的next
+                pre.next = next.next;
+                break;
+            }
+            pre = next;
+            next = next.next;
+        }
+        return head;
+    }
+
 }
