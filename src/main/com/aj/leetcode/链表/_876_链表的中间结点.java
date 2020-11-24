@@ -1,6 +1,7 @@
 package com.aj.leetcode.链表;
 
 import com.aj.leetcode.ListNode;
+import com.aj.leetcode.ListNodeUtil;
 
 /**
  * https://leetcode-cn.com/problems/middle-of-the-linked-list/
@@ -11,19 +12,11 @@ import com.aj.leetcode.ListNode;
 public class _876_链表的中间结点 {
 
     public static void main(String[] args) {
-        ListNode one = new ListNode(1);
-        ListNode two = new ListNode(2);
-        ListNode three = new ListNode(3);
-        ListNode four = new ListNode(4);
-
-        one.next = two;
-        two.next = three;
-//        three.next = four;
-
-        System.out.println(middleNode(one));
+        System.out.println(middleNode(ListNodeUtil.create(1, 2, 3, 4, 5, 6, 7, 7, 6, 5, 4, 3, 2, 1)));
     }
 
     public static ListNode middleNode(ListNode head) {
+        //计算出总共n个节点,从 ((n + 1)/2)
         if (head == null) {
             return null;
         }
@@ -33,8 +26,10 @@ public class _876_链表的中间结点 {
             count++;
             tmp = tmp.next;
         }
-        tmp = head.next;
-        for (int i = 0; i < (count >> 1 + 1); i++) {
+        System.out.println(count);
+        //这是第0个  总共有第n-1个 要取后
+        tmp = head;
+        for (int i = 0; i < (count >> 1); i++) {
             tmp = tmp.next;
         }
         return tmp;

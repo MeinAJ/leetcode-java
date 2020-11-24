@@ -1,6 +1,7 @@
 package com.aj.leetcode.链表;
 
 import com.aj.leetcode.ListNode;
+import com.aj.leetcode.ListNodeUtil;
 
 /**
  * https://leetcode-cn.com/problems/linked-list-cycle/
@@ -8,18 +9,7 @@ import com.aj.leetcode.ListNode;
 public class _141_环形链表 {
 
     public static void main(String[] args) {
-
-        ListNode one = new ListNode(1);
-        ListNode two = new ListNode(2);
-        ListNode three = new ListNode(3);
-        ListNode four = new ListNode(4);
-
-        one.next = two;
-        two.next = three;
-        three.next = four;
-        four.next = three;
-
-        System.out.println(hasCycle(one));
+        System.out.println(hasCycle(ListNodeUtil.create(1, 2, 3, 4, 5, 6, 7, 3, 2)));
 
     }
 

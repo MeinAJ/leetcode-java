@@ -1,6 +1,7 @@
 package com.aj.leetcode.链表;
 
 import com.aj.leetcode.ListNode;
+import com.aj.leetcode.ListNodeUtil;
 
 /**
  * https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/
@@ -8,17 +9,7 @@ import com.aj.leetcode.ListNode;
 public class _18_删除链表的节点 {
 
     public static void main(String[] args) {
-        ListNode one = new ListNode(1);
-        ListNode two = new ListNode(2);
-        ListNode three = new ListNode(3);
-        ListNode four = new ListNode(4);
-
-        one.next = two;
-        two.next = three;
-        three.next = four;
-
-
-        ListNode listNode = deleteNode(one, 1);
+        ListNode listNode = deleteNode(ListNodeUtil.create(1, 2, 3, 4, 5, 6, 7, 3, 2), 1);
         System.out.println(listNode);
     }
 
