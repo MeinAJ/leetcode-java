@@ -1,4 +1,4 @@
-package com.aj.leetcode.链表;
+package com.aj.leetcode.version_1;
 
 import com.aj.leetcode.ListNode;
 import com.aj.leetcode.ListNodeUtil;

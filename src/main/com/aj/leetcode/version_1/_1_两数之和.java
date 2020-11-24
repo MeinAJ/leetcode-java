@@ -3,7 +3,7 @@
  * ABB PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.aj.leetcode.common;
+package com.aj.leetcode.version_1;
 
 import java.util.Arrays;
 
