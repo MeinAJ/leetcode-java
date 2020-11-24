@@ -30,16 +30,16 @@ public class _18_删除链表的节点 {
         if (head.val == val) {
             return head.next;
         }
-        ListNode next = head.next;
-        ListNode pre = head;
-        while (next != null) {
-            if (next.val == val) {
+        ListNode currentNode = head.next;
+        ListNode preNode = head;
+        while (currentNode != null) {
+            if (currentNode.val == val) {
                 //把上一个的next指向该节点的next
-                pre.next = next.next;
+                preNode.next = currentNode.next;
                 break;
             }
-            pre = next;
-            next = next.next;
+            preNode = currentNode;
+            currentNode = currentNode.next;
         }
         return head;
     }
